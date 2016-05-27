@@ -108,6 +108,10 @@ properties:
               properties:
                 'dbType': { type: string, required: TRUE }
                 'className': { type: string, format: class-name, required: TRUE }
+      'cacheImplementation':
+        type:
+          - { type: 'null' }
+          - { type: string, format: class-name }
   'cacheAllQueryResults':
     type: boolean
     required: TRUE
