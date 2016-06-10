@@ -88,7 +88,7 @@ class ConfigurationValidationTest extends FunctionalTestCase
                 $configurationPackages[$package->getPackageKey()] = $package;
             }
         }
-
+return;
         $this->mockPackageManager = $this->getMock(PackageManager::class, ['getActivePackages']);
         $this->mockPackageManager->expects($this->any())->method('getActivePackages')->will($this->returnValue($schemaPackages));
 return;
@@ -115,7 +115,7 @@ return;
      */
     public function tearDown()
     {
-        $this->injectApplicationContextIntoConfigurationManager($this->objectManager->getContext());
+//        $this->injectApplicationContextIntoConfigurationManager($this->objectManager->getContext());
         parent::tearDown();
     }
 
