@@ -1,5 +1,4 @@
 <?php
-
 namespace TYPO3\Flow\Tests\Functional\Configuration\Fixtures;
 
 use TYPO3\Flow\Annotations as Flow;
@@ -21,8 +20,7 @@ class RootDirectoryIgnoringYamlSource extends \TYPO3\Flow\Configuration\Source\Y
     {
         if (strpos($pathAndFilename, FLOW_PATH_CONFIGURATION) === 0) {
             return [];
-        } else {
-            return parent::load($pathAndFilename, $allowSplitSource);
         }
+        return parent::load($pathAndFilename, $allowSplitSource);
     }
 }
