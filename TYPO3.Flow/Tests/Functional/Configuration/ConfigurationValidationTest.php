@@ -127,10 +127,11 @@ return;
     {
         ObjectAccess::setProperty($this->mockConfigurationManager, 'configurations',
             [ConfigurationManager::CONFIGURATION_TYPE_SETTINGS => []], true);
-//        ObjectAccess::setProperty($this->mockConfigurationManager, 'context', $context, true);
-//        ObjectAccess::setProperty($this->mockConfigurationManager, 'orderedListOfContextNames', [(string)$context],
+return;
+        ObjectAccess::setProperty($this->mockConfigurationManager, 'context', $context, true);
+        ObjectAccess::setProperty($this->mockConfigurationManager, 'orderedListOfContextNames', [(string)$context],
             true);
-//        ObjectAccess::setProperty($this->mockConfigurationManager, 'includeCachedConfigurationsPathAndFilename',
+        ObjectAccess::setProperty($this->mockConfigurationManager, 'includeCachedConfigurationsPathAndFilename',
             FLOW_PATH_CONFIGURATION . (string)$context . '/IncludeCachedConfigurations.php', true);
     }
 
